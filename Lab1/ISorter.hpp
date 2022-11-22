@@ -8,7 +8,7 @@
 template<class T, class Iterator>
 class ISort {
 public:
-    Iterator parition(Iterator first, Iterator last, bool comp(T a, T b)) {
+    Iterator parition(Iterator first, Iterator last, bool comp(const T &a, const T &b)) {
         Iterator pivot = first;
         Iterator front = first;
         T temp = 0;
@@ -28,7 +28,7 @@ public:
         return pivot;
     }
 
-    void QuickSortList(Iterator first, Iterator last, bool comp(T a, T b)) {
+    void QuickSortList(Iterator first, Iterator last, bool comp(const T &a, const T &b)) {
         if (first == last) {
             return;
         }
@@ -43,7 +43,7 @@ public:
         }
     }
 
-    void QuickSortArray(Iterator first, Iterator last, bool comp(T a, T b)) {
+    void QuickSortArray(Iterator first, Iterator last, bool comp(const T &a, const T &b)) {
         Iterator i = first, j = last;
         Iterator firstElement = i;
         Iterator middle = i;
@@ -84,7 +84,7 @@ public:
         }
     }
 
-    void InsertionSort(Iterator first, Iterator last, bool comp(T a, T b)) {
+    void InsertionSort(Iterator first, Iterator last, bool comp(const T &a, const T &b)) {
         T temp;
         int item;
         int size = 1;
@@ -112,7 +112,7 @@ public:
         }
     }
 
-    void Merge(Iterator first, Iterator last, Iterator middle, bool comp(T a, T b)) {
+    void Merge(Iterator first, Iterator last, Iterator middle, bool comp(const T &a, const T &b)) {
         Iterator i = first;
         Iterator k = first;
         int size = 1;
@@ -181,7 +181,7 @@ public:
         }
     }
 
-    void MergeSortArray(Iterator first, Iterator last, bool comp(T a, T b)) {
+    void MergeSortArray(Iterator first, Iterator last, bool comp(const T &a, const T &b)) {
         Iterator middle = first;
         if (first < last) {
             Iterator firstElement = first;
@@ -203,7 +203,7 @@ public:
         }
     }
 
-    void MergeList(Iterator first, Iterator last, Iterator middle, bool comp(T a, T b)) {
+    void MergeList(Iterator first, Iterator last, Iterator middle, bool comp(const T &a, const T &b)) {
         Iterator i = first;
         Iterator k = first;
         int size = 1;
@@ -312,7 +312,7 @@ public:
         }
     }
 
-    void MergeSortList(Iterator first, Iterator last, bool comp(T a, T b)) {
+    void MergeSortList(Iterator first, Iterator last, bool comp(const T &a, const T &b)) {
         Iterator middle = first;
         int c_first = 0;
         int c_last = 0;

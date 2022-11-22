@@ -4,11 +4,11 @@
 template<class T>
 class Comparator {
 public:
-    static bool increase(T a, T b) {
+    static bool increase(const T &a, const T &b) {
         return a > b;
     }
 
-    static bool descending(T a, T b) {
+    static bool descending(const T &a, const T &b) {
         return a < b;
     }
 };
